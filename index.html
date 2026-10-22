@@ -790,8 +790,9 @@
 
                         <script>
 
-                            const SCRIPT_URL =
-                                "https://script.google.com/macros/s/AKfycbzhfxvdF-i67HyNYSVpE8PPlVrjNzAkNH1V-mg0PfjwqzK-k5rZlYMGDUBvkKOJklIbxg/exec";
+                            // Web app URL of the Apps Script bound to the leads sheet.
+                            // See google-apps-script/README.md for how to get this.
+                            const SCRIPT_URL = "PASTE_NEW_WEB_APP_URL_HERE";
 
                             const form = document.getElementById("orderForm");
                             const submitBtn = document.getElementById("submitBtn");
@@ -927,8 +928,22 @@
                                 }
 
                                 // Disable button & show waiting state
+                                const btnOriginalHTML = submitBtn.innerHTML;
                                 submitBtn.disabled = true;
                                 submitBtn.innerHTML = "कृपया प्रतीक्षा करें...";
+
+                                function resetSubmitButton() {
+                                    submitBtn.disabled = false;
+                                    submitBtn.innerHTML = btnOriginalHTML;
+                                }
+
+                                function recordAndRedirect() {
+                                    localStorage.setItem("order_submitted_" + phone, "1");
+                                    saveIPOrderTimestamp(currentVisitorIP);
+                                    setTimeout(function () {
+                                        window.location.replace("thankyou.html");
+                                    }, 300);
+                                }
 
                                 // Record submission time
                                 const timeField = document.getElementById("orderTime");
@@ -936,32 +951,43 @@
                                     timeField.value = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
                                 }
 
-                                const formData = new FormData(form);
+                                // Sent urlencoded so the browser treats it as a "simple"
+                                // request and skips the CORS preflight that Apps Script
+                                // cannot answer. The reply stays readable, so a lead that
+                                // fails to save is no longer reported as a success.
+                                const payload = new URLSearchParams();
+                                new FormData(form).forEach(function (value, key) {
+                                    payload.append(key, value);
+                                });
+                                payload.append("User_Agent", navigator.userAgent);
 
-                                fetch(SCRIPT_URL, {
-                                    method: "POST",
-                                    mode: "no-cors",
-                                    body: formData
-                                })
-                                    .then(function () {
-                                        // Save Phone & IP in local order history
-                                        localStorage.setItem("order_submitted_" + phone, "1");
-                                        saveIPOrderTimestamp(currentVisitorIP);
-
-                                        // Redirect
-                                        setTimeout(function () {
-                                            window.location.replace("thankyou.html");
-                                        }, 300);
+                                fetch(SCRIPT_URL, { method: "POST", body: payload })
+                                    .then(function (res) { return res.json(); })
+                                    .then(function (data) {
+                                        if (data && data.status === "success") {
+                                            recordAndRedirect();
+                                        } else if (data && data.status === "duplicate") {
+                                            resetSubmitButton();
+                                            showDuplicatePopup(
+                                                "Duplicate Order Found!",
+                                                "इस मोबाइल नंबर (" + phone + ") से पहले ही ऑर्डर प्राप्त हो चुका है। हमारे स्वास्थ्य विशेषज्ञ जल्द ही आपसे संपर्क करेंगे।"
+                                            );
+                                        } else {
+                                            resetSubmitButton();
+                                            showDuplicatePopup(
+                                                "ऑर्डर सेव नहीं हो सका",
+                                                "कृपया दोबारा प्रयास करें या हमें सीधे कॉल करें। (" + ((data && data.message) || "unknown error") + ")"
+                                            );
+                                        }
                                     })
                                     .catch(function (error) {
-                                        console.log("Request:", error);
-
-                                        localStorage.setItem("order_submitted_" + phone, "1");
-                                        saveIPOrderTimestamp(currentVisitorIP);
-
-                                        setTimeout(function () {
-                                            window.location.replace("thankyou.html");
-                                        }, 1000);
+                                        // Reply unreadable (offline, or the deployment is not
+                                        // public). Resend blind so the lead is not lost; the
+                                        // script's duplicate check discards it if the first
+                                        // POST did in fact arrive.
+                                        console.log("Lead POST unreadable, resending blind:", error);
+                                        fetch(SCRIPT_URL, { method: "POST", mode: "no-cors", body: payload })
+                                            .finally(function () { recordAndRedirect(); });
                                     });
 
                             });

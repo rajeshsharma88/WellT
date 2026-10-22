@@ -6,4 +6,5 @@ Dockerfile
 .dockerignore
 docker-compose.yml
 DEPLOY.md
+google-apps-script/
 *.zip
