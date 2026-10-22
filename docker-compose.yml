@@ -4,7 +4,12 @@ services:
     image: wellness1:latest
     container_name: wellness1
     restart: unless-stopped
-    # Bound to localhost so a reverse proxy on the host terminates TLS.
-    # Change to "80:80" only if this container faces the internet directly.
-    ports:
-      - "127.0.0.1:8080:80"
+    # No published ports: Traefik runs in host network mode and reaches this
+    # container on its bridge IP. Labels mirror the n8n service on the same
+    # host, so TLS is issued by the shared "letsencrypt" resolver.
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.wellness1.entrypoints=websecure
+      - traefik.http.routers.wellness1.rule=Host(`wellness.aarogya.cloud`)
+      - traefik.http.routers.wellness1.tls.certresolver=letsencrypt
+      - traefik.http.services.wellness1.loadbalancer.server.port=80

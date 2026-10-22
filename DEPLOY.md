@@ -18,24 +18,32 @@ No SSH needed; everything happens in the Coolify dashboard.
    resolves to the server.
 5. **Deploy.** Enable auto-deploy so `git push` ships to production.
 
-## Option B — plain Docker VPS
+## Option B — the srv1982925 VPS (201.18.193.164)
+
+This host already runs n8n, Postgres, Redis and Ollama behind Traefik v3, which
+owns ports 80 and 443 in host network mode. Do **not** install another reverse
+proxy or publish port 80 here; it will collide. `docker-compose.yml` carries
+Traefik labels instead, matching the pattern the n8n service uses, so the
+existing `letsencrypt` resolver issues the certificate.
+
+Deployed at `/docker/wellness1`, alongside the other compose projects:
 
 ```bash
-git clone git@github.com:rajeshsharma88/wellness1.git
-cd wellness1
+cd /docker/wellness1
 docker compose up -d --build
 ```
 
-The container listens on `127.0.0.1:8080`. Put a reverse proxy in front of it
-to terminate TLS — Caddy is the shortest path:
+To update, sync the files up and rebuild:
 
-```
-example.com {
-    reverse_proxy 127.0.0.1:8080
-}
+```bash
+rsync -avz --delete --exclude '.git' --exclude '.DS_Store' \
+  ./ root@201.18.193.164:/docker/wellness1/
+ssh root@201.18.193.164 'cd /docker/wellness1 && docker compose up -d --build'
 ```
 
-To update: `git pull && docker compose up -d --build`.
+Requires an `A` record for `wellness` → `201.18.193.164` on `aarogya.cloud`
+(Hostinger hPanel; the zone uses dns-parking.com nameservers). Traefik's HTTP
+challenge cannot issue a certificate until that resolves.
 
 ## Before going live
 
