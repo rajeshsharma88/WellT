@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <title>इस उपाय से जोश और टाइमिंग बढ़ाकर, हर रात पार्टनर को दें जिस्मानी सुख !!</title>
+    <link rel="stylesheet" href="npm/bootstrap%25405.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style-2.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .duplicate-warning {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid black;
+            color: red;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .clock {
+            width: calc(100% - 30px);
+            margin-left: 15px
+        }
+
+        .clock>div {
+            width: calc(25% - 12px);
+            margin-left: 6px;
+            margin-right: 6px;
+            float: left
+        }
+
+        .clock div div {
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: 16px 5px 16px 5px;
+            border: 2px solid rgba(0, 0, 0, .8);
+            height: 40px;
+            line-height: 34px;
+            font-size: 22px
+        }
+
+        .phone {
+            width: 80px;
+            height: 50px;
+            left: 12px;
+            bottom: 230px;
+            /*background: #10b418;*/
+            position: fixed;
+            text-align: center;
+            color: #ffffff;
+            cursor: pointer;
+            border-radius: 50%;
+            z-index: 99;
+            display: inline-block;
+            line-height: 65px;
+        }
+
+        @media (min-width: 992px) {
+            #phone-link {
+                max-width: 430px !important;
+                left: calc(50% - 215px) !important;
+            }
+        }
+
+        .whatsapp-sticky {
+            position: fixed;
+            bottom: 300px;
+            right: 1px;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1px;
+        }
+
+        .whatsapp-sticky img {
+            margin-right: 10px;
+        }
+
+        .whatsapp-sticky:hover {
+            background-color: #;
+        }
+
+        @keyframes zoomIn {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+                /* You can adjust the scaling factor for desired zoom level */
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .zoom-in {
+            animation: zoomIn 3s ease-in-out infinite;
+            /* You can adjust the animation duration and timing function */
+
+        }
+
+        .benefit-item {
+            display: inline-block;
+            width: 180px;
+            margin: 5px;
+            vertical-align: top;
+        }
+
+        /* On smaller screens (max-width: 600px),
+     make each item about half the container width 
+     so they appear two per row. */
+        @media (max-width: 600px) {
+            .benefit-item {
+                width: 45%;
+            }
+        }
+
+        .fixed-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 9999;
+            background-color: yellow;
+            color: black;
+            padding: 2px 0;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .fixed-background span {
+            display: inline-block;
+
+        }
+    </style>
+</head>
+
+<body style="padding-bottom: 40px">
+
+    <div class="fixed-background">
+        <marquee>
+            <span>⚠️ सावधान यह दवा सिर्फ 🚫 21 वर्ष से ऊपर के पुरुषों के लिए है, मस्ती मजाक के लिए कॉल करने वालों पर कड़ी
+                कार्यवाही होगी.</span>
+        </marquee>
+    </div>
+
+
+    <div id="root">
+        <div class="w-100 fontf">
+            <div class="m-auto bg-light text-dark" style="width: 100%;">
+                <div class="d-flex justify-content-between align-items-center p-2 anima"
+                    style="background-color: rgb(255, 255, 255);">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                    </div>
+                </div>
+                <br>
+                <a href="#orderForm">
+                    <div class="w-100"><img src="assets/images/2live.JPEG" alt="no" class="w-100"></div>
+                </a>
+
+
+                <div class="w-100 text-center"
+                    style="background:#fff; padding:25px; border:2px solid #e5e5e5; border-radius:12px;">
+
+                    <div style="font-size:30px; color:#e60000; text-decoration:line-through; font-weight:700;">
+                        Price ₹3500/-
+                    </div>
+
+                    <div style="font-size:56px; color:#5C0406; font-weight:900; line-height:1.2; margin-top:10px;">
+                        विशेष ऑफर मूल्य ₹ 999/-
+                    </div>
+
+                </div>
+
+
+                <div class="w-100">
+                    <img src="assets/images/2banner.webp" alt="Descriptive text about the image" class="w-100">
+                </div>
+                <div>
+                    <p class="p-2 fw-bold" style="background-color: black; color: white; text-align: justify;">
+                        दोस्तों, दशकों से आज तक कई सर्वे होते आ रहे है जिसमे पुरुष भाग लेते है। इस सर्वे में ये पता चला
+                        है की पुरुषों में शीघ्रपतन, पार्ट में ढीलापन, स्टैमिना और एनर्जी की कमी जैसी यौन समस्या तेजी से
+                        बढ़ रही है। ऐसे में पुरुषों की को चाहिये<span style="font-size: 1.2rem; color:#DB9417;">
+                            &nbsp;Aarogya Champ</span> जैसी असरदार औषधि जो समस्या पर तेजी से असर करें और इसे जड़ से उखाड़
+                        फेके।
+                    </p>
+                </div>
+
+                <div class="w-100" style="background-color: black; padding: 20px; text-align: center;">
+                    <div class="p-2 text-light d-flex justify-content-center align-items-center"
+                        style="background-color: #5C0406; border: 2px dashed #FFC43E; border-radius: 20px; height: 50px;">
+                        <h4 class="fw-bold"
+                            style="font-size: 20px; color: white; margin: 0; background-color: transparent;">लिंग की
+                            लम्बाई-मोटाई में वृद्धि</h4>
+                    </div>
+                    <br>
+                    <img src="assets/images/gif1.webp" alt="Descriptive text about the image" class="w-100"
+                        style="border: 2px solid #FFC43E; border-radius: 10px;">
+                </div>
+
+                <div class="w-100" style="background-color: black; padding: 20px; text-align: center;">
+                    <div class="p-2 text-light d-flex justify-content-center align-items-center"
+                        style="background-color: #5C0406; border: 2px dashed #FFC43E; border-radius: 20px; height: 50px;">
+                        <h4 class="fw-bold"
+                            style="font-size: 20px; color: white; margin: 0; background-color: transparent;">सेक्स समय
+                            अवधि में वृद्धि</h4>
+                    </div>
+                    <br>
+                    <img src="assets/images/gif2.webp" alt="Descriptive text about the image" class="w-100"
+                        style="border: 2px solid #FFC43E; border-radius: 10px;">
+                </div>
+                <div class="w-100" style="background-color: black; padding: 20px; text-align: center;">
+                    <div class="p-2 text-light d-flex justify-content-center align-items-center"
+                        style="background-color: #5C0406; border: 2px dashed #FFC43E; border-radius: 20px; height: 50px;">
+                        <h4 class="fw-bold"
+                            style="font-size: 20px; color: white; margin: 0; background-color: transparent;">स्टैमिना
+                            में वृद्धि थकान से राहत</h4>
+                    </div>
+                    <br>
+                    <img src="assets/images/gif3.webp" alt="Descriptive text about the image" class="w-100"
+                        style="border: 2px solid #FFC43E; border-radius: 10px;">
+                </div>
+                <div class="w-100" style="background-color: black; padding: 20px; text-align: center;">
+                    <div class="p-2 text-light d-flex justify-content-center align-items-center"
+                        style="background-color: #5C0406; border: 2px dashed #FFC43E; border-radius: 20px; height: 50px;">
+                        <h4 class="fw-bold"
+                            style="font-size: 20px; color: white; margin: 0; background-color: transparent;">जोश और
+                            आत्मविश्वास में वृद्धि</h4>
+                    </div>
+                    <br>
+                    <img src="assets/images/gif4.webp" alt="Descriptive text about the image" class="w-100"
+                        style="border: 2px solid #FFC43E; border-radius: 10px;">
+                </div>
+                <div class="w-100"><img src="assets/images/king.JPEG" alt="no" class="w-100"></div>
+
+                <div class="text-center fs-4 my-3">
+                    <button class="btn text-light fw-bold pt-2 px-5 pb-0 fs-4 zoom-in"
+                        style="background-color: #5C0406;">
+                        <a href="#orderForm" class="text-light fw-bold text-decoration-none fs-4">Order Now</a>
+                    </button>
+                </div>
+                <div class="w-100"><img src="assets/images/3cabanner.webp" alt="no" class="w-100"></div>
+
+                <section
+                    style="max-width: 100%; margin: 10px auto; padding: 10px; background: white; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); background: url('assets/images/back.webp') no-repeat center center/cover; display: flex; align-items: flex-start; justify-content: space-between; gap: 20px;">
+                    <div style="width: 55%; padding: 10px;">
+                        <h1
+                            style="font-size: 45px; font-weight: bold; margin-bottom: 10px; background: #5C0406; display: inline-block; color: white; padding: 10px;">
+                            पोन स्टार</h1>
+                        <h2 style="font-size: 25px; font-weight: normal; color: black; margin-bottom: 3px;">की तरह सेक्स
+                            करने का</h2>
+                        <h3 style="font-size: 30px; font-weight: bold; color: #5C0406; margin-bottom: 10px;">पावरफुल
+                            फार्मूला</h3>
+                        <p
+                            style="font-size: 16px; font-weight: bold; color: black; line-height: 1.6; text-align: justify;">
+                            <strong>Aarogya Champ</strong> के इस्तेमाल से आप उस तरह का धमाकेदार सेक्स प्रदर्शन कर सकते
+                            हैं जैसा पोर्न वीडियो में देखते हैं। इसका इस्तेमाल हर पुरुष कर सकता है <strong>Aarogya
+                                Champ</strong> लंबे सेक्स टाइम और हाई इरेक्शन का गारंटीड इलाज है।
+                        </p>
+                    </div>
+                    <div style="width: 45%; display: flex; justify-content: center; align-items: flex-end;">
+                        <img src="assets/images/pSTAND.JPEG" alt="Aarogya Champ Product"
+                            style="width: 100%; max-width: 250px; border-radius: 10px; align-self: flex-end;">
+                    </div>
+                </section>
+                <div class="p-2 text-light" style="background-color: #5C0406; ">
+                    <h3 class="fw-bold py-1 text-center" style="font-size: 18px; color: white;  "> जल्दी होने वाला वीर्य
+                        विस्फोट रोके, ताकि हर पुरुष देर तक ठोके ! </h3>
+                </div>
+
+                <div style="display: flex; gap: 20px; justify-content: center; align-items: center; margin: 20px 0;">
+
+                    <!-- First Card -->
+                    <div
+                        style="width: 160px; height: 120px; background-color: #5C0406; border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); position: relative; overflow: hidden; text-align: center;">
+                        <h1
+                            style="margin: 0; color: white; font-size: 36px; font-weight: bold; position: absolute; top: 20px; width: 100%;">
+                            100%</h1>
+                        <div
+                            style="position: absolute; bottom: 0; background-color: white; width: 100%; height: 40%; border-top-left-radius: 50px; border-top-right-radius: 50px; display: flex; justify-content: center; align-items: center;">
+                            <p style="margin: 0; color: black; font-size: 19px; font-weight: bold;">SAFE</p>
+                        </div>
+                    </div>
+
+                    <!-- Second Card -->
+                    <div
+                        style="width: 160px; height: 120px; background-color: #FFC43E; border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); position: relative; overflow: hidden; text-align: center;">
+                        <h1
+                            style="margin: 0; color: white; font-size: 36px; font-weight: bold; position: absolute; top: 20px; width: 100%;">
+                            100%</h1>
+                        <div
+                            style="position: absolute; bottom: 0; background-color: white; width: 100%; height: 40%; border-top-left-radius: 50px; border-top-right-radius: 50px; display: flex; justify-content: center; align-items: center;">
+                            <p style="margin: 0; color: black; font-size: 19px; font-weight: bold;">Effective</p>
+                        </div>
+                    </div>
+
+                    <!-- Third Card -->
+                    <div
+                        style="width: 160px; height: 120px; background-color: #5C0406; border-radius: 10px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); position: relative; overflow: hidden; text-align: center;">
+                        <h1
+                            style="margin: 0; color: white; font-size: 36px; font-weight: bold; position: absolute; top: 20px; width: 100%;">
+                            0%</h1>
+                        <div
+                            style="position: absolute; bottom: 0; background-color: white; width: 100%; height: 40%; border-top-left-radius: 50px; border-top-right-radius: 50px; display: flex; justify-content: center; align-items: center;">
+                            <p style="margin: 0; color: black; font-size: 19px; font-weight: bold;">Side Effects</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="text-center fs-4 my-3">
+                    <button class="btn text-light fw-bold pt-2 px-5 pb-0 fs-4 zoom-in"
+                        style="background-color: #5C0406;">
+                        <a href="#orderForm" class="text-light fw-bold text-decoration-none fs-4">Order Now</a>
+                    </button>
+                </div>
+
+                <div class="my-3 text-center">
+                    <h1 class="fw-bold mb-0" style="color: black;">क्या आप भी मर्दानगी की ऐसी ही समस्याओं से गुजर रहें
+                        हैं?</h1>
+                </div>
+                <div class="px-2">
+                    <div class="d-flex align-items-center my-2" style="background-color: #5C0406;">
+                        <div class="p-2" style="background-color: white;"><img src="assets/images/1icon.png" alt="no"
+                                width="51px"></div>
+                        <div class="text-white ps-2">
+                            <p class="pt-1" style="font-size: 18px; font-weight: bold;">सेक्सुअल टाइमिंग में कमी</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center my-2" style="background-color: #5C0406;">
+                        <div class="p-2" style="background-color: white;"><img src="assets/images/2icon.png" alt="no"
+                                width="51px"></div>
+                        <div class="text-white ps-2">
+                            <p class="pt-1" style="font-size: 18px; font-weight: bold;">बेअसर और छोटा लिंग</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center my-2" style="background-color: #5C0406;">
+                        <div class="p-2" style="background-color: white;"><img src="assets/images/3icon.png" alt="no"
+                                width="51px"></div>
+
+
+                        <div class="text-white ps-2">
+                            <p class="pt-1" style="font-size: 18px; font-weight: bold;">स्टेमिना और एनर्जी लेवल में
+                                ठंडापन</p>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center my-2" style="background-color: #5C0406;">
+                        <div class="p-2" style="background-color: white;"><img src="assets/images/4icon.png" alt="no"
+                                width="51px"></div>
+                        <div class="text-white ps-2">
+                            <p class="pt-1" style="font-size: 18px; font-weight: bold;">ऑर्गेज्म का शटर उठने से पहले ही
+                                गिर जाता हैं,</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <p class="p-2 fw-bold" style="background-color: rgb(238, 238, 238);">क्या आपकी पार्टनर ने आपसे कभी
+                        यह कहा है, कि वह आपकी परफॉर्मेंस
+                        से संतुष्ट हैं. या उसने आपसे कभी वन्स मोर कहा हो, लेकिन आपका लिंग परफॉर्मेंस के पहले राउंड से
+                        पहले ही लुढ़क चुका हों, तब आपको फौरन
+                        <span style="font-size: 1.2rem; color: #5C0406;">Aarogya Champ </span> का इस्तेमाल शुरू कर देना
+                        चाहिए.
+                    </p>
+                </div>
+                <div class="d-flex justify-content-center mt-3">
+                    <div class="p-3 text-light d-flex align-items-center justify-content-center"
+                        style="background-color: white; border: 2px dashed black; height: 70px; width: 60%; display: flex; align-items: center; justify-content: center; padding: 10px;">
+                        <h3 class="fw-bold text-center"
+                            style="font-size: 24px; color: #5C0406; font-weight: bold; border: 2px dashed black; padding: 5px 30px; background-color: white; margin-right: 10px; margin-top: 5px;">
+                            लिंग बृद्धि ग्राफ
+                        </h3>
+                    </div>
+                </div>
+
+                <br>
+                <div class="w-100"><img src="assets/images/graphh.webp" alt="no" class="w-100"></div>
+                <div class="p-2 text-light" style="background-color: #000000;">
+                    <p class="">* Aarogya Champ प्रथम दिन से ही समस्या रिकवरी पर काम करता है। यह लिंग के&nbsp;
+                        <span style=" color: yellow;">कॉर्पस केवरोसोम</span> &nbsp; में <span style="color:yellow;">
+                            &nbsp;रक्त प्रवाह बढ़ाता है</span> &nbsp;और कोशिकाओं का निर्माण करता है जिससे लिंग के नसों का
+                        फैलना, साइज का बढ़ना सुनिश्चित होता है।
+                    </p>
+                    <img src="assets/images/testrone.webp" alt="Descriptive text about the image" class="w-100"
+                        width="80%"> <br> <br>
+                    <p class="">अगर कोई भी <span style=" color: yellow;">&nbsp;पुरुष जल्दी डिस्चार्ज </span>&nbsp;हो
+                        जाता है, लिंग में दम नहीं है तो उसे बिना हिचक के <span style=" color: yellow;">&nbsp;Aarogya
+                            Champ </span>&nbsp;अवश्य आजमाना चाहिए !</p>
+                    <img src="assets/images/live.webp" alt="Descriptive text about the image" class="w-100" width="80%">
+                    <br> <br>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <img src="assets/images/tir.webp" alt="Target Icon"
+                            style="max-width: 100%; height: auto; margin-right: 10px;">
+                        <span style="font-size: 24px; font-weight: bold;">हमारा लक्ष्य</span>
+                    </div><br>
+                    <p class="">"हम चाहते है सभी <span style=" color: yellow;">&nbsp; पुरुष फौलादी &nbsp;</span> लिंग और
+                        &nbsp;<span style=" color: yellow;">&nbsp;दमदार सेक्स &nbsp; </span> प्रदर्शन से बीवी/प्रेमिका
+                        को संतुष्ट रखे, ताकि वैवाहिक जीवन या लव रिलेशनशिप में रोमांच रहे। यौन असंतुष्टि की वजह से रिश्ते
+                        में कड़वाहट और दरार न आये!</p>
+
+                    <div class="text-center fs-4 my-3">
+                        <button class="btn text-light fw-bold pt-2 px-5 pb-0 fs-4 zoom-in"
+                            style="background-color: #5C0406;">
+                            <a href="#orderForm" class="text-light fw-bold text-decoration-none fs-4">Order Now</a>
+                        </button>
+                    </div>
+                </div>
+
+
+                <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px;">
+                    <h1
+                        style=" border: 2px dashed #000; text-align: center; color: #000; font-size: 30px;  font-weight: bold; padding: 10px;  margin: 0 0 30px 0;">
+                        लिंग और शक्तिवर्धक यौगिक
+                    </h1>
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <img src="assets/images/a111.webp" alt="अश्वगंधा"
+                            style="  max-width:10% height:auto; margin-right:20px;">
+                        <div>
+                            <h2 style="color: #000; font-size: 30px; font-weight: bold; margin: 0;">
+                                अश्वगंधा
+                            </h2>
+                            <p style="color: #000; font-size: 18px; margin: 5px 0 0;">
+                                टेस्टोस्टेरोन और नाइट्रिक ऑक्साइड का निर्माण कर लिंग साइज़ व मजबूती बढ़ाता है।
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <img src="assets/images/a22.webp" alt="अश्वगंधा"
+                            style="  max-width: 100% height:auto; margin-right:20px;">
+                        <div>
+                            <h2 style="color: #000; font-size: 30px; font-weight: bold; margin: 0;">
+                                शिलाजीत
+                            </h2>
+                            <p style="color: #000; font-size: 18px; margin: 5px 0 0;">
+                                लिंग की लंबाई व नसों में ब्लड फ्लो और वीर्य में शुक्राणु बढ़ाता है।<br>
+                                यह सभी खनिज का सागर कहा जाता है।
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <img src="assets/images/a333.webp" alt="अश्वगंधा"
+                            style="  max-width: 100% height:auto; margin-right:20px;">
+                        <div>
+                            <h2 style="color: #000; font-size: 30px; font-weight: bold; margin: 0;">
+                                सफेद मूसली
+                            </h2>
+                            <p style="color: #000; font-size: 18px; margin: 5px 0 0;">
+                                लिंग की इरेक्शन पावर को मजबूत करता है, वीर्य में शुक्राणुओं की संख्या बढ़ाता है।
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <img src="assets/images/a444.webp" alt="अश्वगंधा"
+                            style="  max-width: 100% height:auto; margin-right:20px;">
+                        <div>
+                            <h2 style="color: #000; font-size: 30px; font-weight: bold; margin: 0;">
+                                केसर
+                            </h2>
+                            <p style="color: #000; font-size: 18px; margin: 5px 0 0;">
+                                रक्त, टेस्टोस्टेरोन और उत्तेजना बढ़ाता है, शीघ्रपतन की समस्या को दूर करता है।
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; align-items: center; margin-bottom: 30px;">
+                        <img src="assets/images/a555.webp" alt="अश्वगंधा"
+                            style="  max-width: 100% height:auto; margin-right:20px;">
+                        <div>
+                            <h2 style="color: #000; font-size: 30px; font-weight: bold; margin: 0;">
+                                गोक्षुर
+                            </h2>
+                            <p style="color: #000; font-size: 18px; margin: 5px 0 0;">
+                                टेस्टोस्टेरोन को बढ़ाता है, सेक्स पॉवर और स्पर्म काउंट को बढ़ाता है।
+                            </p>
+                        </div>
+                    </div>
+                    <p
+                        style="background-color: #FFC43E;  color: #5C0406; font-size: 18px; font-weight: bold; padding: 2px; margin: 0 auto; text-align: center;  width: 100%;">
+                        (ये मुख्य तत्व है इसमें 17 उत्कृष्ट जड़ीबूटियों और<br>
+                        भस्मों का श्रेष्ठ संयोजन किया गया है )
+                    </p>
+                </div>
+
+                <div style="max-width: 800px; margin: 0 auto; padding: 20px; background: #000; text-align: center;">
+                    <h2
+                        style="font-size: 20px; margin-bottom: 20px; background: #FFC43E; border-radius: 8px; padding: 10px; font-weight: bold; color: #5C0406;">
+                        Aarogya Champ के अद्भुत लाभ जो ग्राहक अनुभव करते हैं!
+                    </h2>
+                    <div class="benefit-item">
+                        <img src="assets/images/beni1.webp" alt="Testosterone"
+                            style="width: 100px; height: auto; display: block; margin: 0 auto;">
+                        <p style="font-size: 16px; color: #fff; margin-top: 10px;">
+                            टेस्टोस्टेरोन का उच्च स्तर
+                        </p>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="assets/images/beni2.webp" alt="Flexible Penis"
+                            style="width: 100px; height: auto; display: block; margin: 0 auto;">
+                        <p style="font-size: 16px; color: #fff; margin-top: 10px;">
+                            मजबूत नसों के साथ फ्लेक्सिबल लिंग
+                        </p>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="assets/images/beni3.webp" alt="Thick Semen"
+                            style="width: 100px; height: auto; display: block; margin: 0 auto;">
+                        <p style="font-size: 16px; color: #fff; margin-top: 10px;">
+                            गाढ़ा वीर्य, सभी यौन समस्याओं से राहत
+                        </p>
+                    </div>
+                    <div class="benefit-item">
+                        <img src="assets/images/beni4.webp" alt="Long Duration"
+                            style="width: 100px; height: auto; display: block; margin: 0 auto;">
+                        <p style="font-size: 16px; color: #fff; margin-top: 10px;">
+                            कम से कम 30-45 मिनट लगातार सेक्स
+                        </p>
+                    </div>
+                </div>
+
+
+
+                <div class="" style="background-color: rgb(240, 239, 234);"><br>
+                    <h2
+                        style="font-size: 25px; margin-bottom: 20px; background: #5C0406; border-radius: 20px; padding: 10px; font-weight: bold; color: white; text-align: center;">
+                        Give Ultimate Pleasure with Rock Hard Penis</h2>
+
+                    <h4 class="p-2 fw-bold" style="text-align: center; color: black; ">अपने प्रदर्शन को बनाएं ऐसा मजबूत,
+                        कि बिस्तर आपके
+                        प्रदर्शन की गवाही दें</h4>
+                    <div class="px-2 my-3">
+                        <div class="bg-white rounded-3 border border-2 border-light"
+                            style="overflow: hidden; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <div class="w-100"><img src="assets/images/image_5.gif" alt="no" class="w-100"></div>
+                            <p class="p-2 text-dark"><span
+                                    style="color: #5C0406; font-size: 1.1rem; font-weight: bold;">Aarogya Champ </span>
+                                के
+                                इस्तेमाल के बाद आपकी सेक्सुअल टाइमिंग तो जैसे आसमान को छूने लगती हैं. इसकी मदद से बेड पर
+                                जल्दी फुर्सत पा लेने वाले मर्द अब
+                                घंटों तक सेक्स का आनन्द उठाते हैं</p>
+                        </div>
+                    </div>
+                    <div class="px-2 my-3">
+                        <div class="bg-white rounded-3 border border-2 border-light"
+                            style="overflow: hidden; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <div class="w-100"><img src="assets/images/image_4.gif" alt="no" class="w-100"></div>
+                            <p class="p-2 text-dark"><span
+                                    style="color: #5C0406; font-size: 1.1rem; font-weight: bold;">Aarogya Champ </span>
+                                का
+                                इस्तेमाल करने वाले पुरुषों के लिंग में तो ऐसा बदलाव होता हैं, कि सिकुड़ा और बुझा बुझा सा
+                                रहने वाला लिंग ऐसा सख्त और मजबूत
+                                बन जाता हैं, कि पार्टनर दांतों तले उंगलियां दबाने को मजबूर हों जाती हैं</p>
+                        </div>
+                    </div>
+                    <div class="px-2 my-3">
+                        <div class="bg-white rounded-3 border border-2 border-light"
+                            style="overflow: hidden; box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+                            <div class="w-100"><img src="assets/images/image_6.gif" alt="no" class="w-100"></div>
+                            <p class="p-2 text-dark"><span
+                                    style="color: #5C0406; font-size: 1.1rem; font-weight: bold;">Aarogya Champ </span>
+                                के
+                                इस्तेमाल के बाद टेस्टोस्टेरोन के स्तर में भी वृद्धि होती हैं. साथ ही स्पर्म काउंट बढ़ाने
+                                और स्पर्म की क्वालिटी को बेहतर
+                                बनाने में भी Aarogya Champ काफी मददगार साबित हुआ हैं</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center fs-4 my-3">
+                        <button class="btn text-light fw-bold pt-2 px-5 pb-0 fs-4" style="background-color: #5C0406;"><a
+                                href="#orderForm" class="text-light fw-bold text-decoration-none fs-4">आज
+                                ही ऑर्डर करे</a></button>
+                    </div>
+                    <div class="my-3 text-center">
+                        <h1 class="fw-bold mb-0" style="text-align: center; color: #5C0406; ">लड़कियों का अंग अंग
+                            फड़केगा, जब आपके अंग से देर तक शोला बरसेगा</h1>
+                    </div>
+                    <div class="rounded-3" style="background-color: #5C0406;">
+                        <h6 class="mb-0 pb-1 pt-2 text-light fw-bold text-center">Aarogya Champ बदले आपके सेक्स का अंदाज
+                        </h6>
+                    </div>
+                    <div><br>
+
+                        <div class="w-100" style="background-color: black;"><img src="assets/images/standgir2.webp"
+                                alt="no" class="w-100"></div>
+                        <div class="w-100" style="background-color: black;"><img src="assets/images/kliviproductt.JPEG"
+                                alt="no" class="w-100"></div>
+
+                        <div class="my-3 text-center">
+                            <h1 class="fw-bold mb-0">कॉल पर विशेषज्ञ डॉक्टरों से बात करने के लिए फॉर्म भरें !</h1>
+                        </div>
+                        <div class="my-3 text-center" style="color: #000000;">
+                            <h1 class="fw-bold mb-0" style="font-size: 2.1rem;">ज्यादा सोचे नहीं</h1>
+                        </div>
+
+                        <div class="col footer" style="text-align: center;">
+                            <div class="row">
+
+                            </div>
+                        </div>
+
+                        <div class="order-form-wrapper">
+                            <section class="form">
+                                <form class="premium-order-card" id="orderForm">
+
+                                    <div class="text-center mb-2">
+                                        <div class="offer-badge">
+                                            <i class="fa-solid fa-bolt"></i>
+                                            <span>LIMITED TIME OFFER (सीमित समय ऑफर)</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="premium-clock" id="clockdiv-1">
+                                        <div class="timer-box">
+                                            <div class="timer-digits days">00</div>
+                                            <div class="timer-label">Days</div>
+                                        </div>
+                                        <div class="timer-box">
+                                            <div class="timer-digits hours">05</div>
+                                            <div class="timer-label">Hours</div>
+                                        </div>
+                                        <div class="timer-box">
+                                            <div class="timer-digits minutes">00</div>
+                                            <div class="timer-label">Minutes</div>
+                                        </div>
+                                        <div class="timer-box">
+                                            <div class="timer-digits seconds">00</div>
+                                            <div class="timer-label">Seconds</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field-group">
+                                        <label class="field-label" for="userName">
+                                            <i class="fa-solid fa-user"></i>
+                                            <span>आपका नाम (Your Name)</span>
+                                            <span class="required-star">*</span>
+                                        </label>
+                                        <div class="premium-input-box">
+                                            <input type="text" id="userName" name="Name" placeholder="अपना नाम लिखें"
+                                                required="" autocomplete="name">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field-group">
+                                        <label class="field-label" for="phone">
+                                            <i class="fa-solid fa-phone"></i>
+                                            <span>आपका फोन नंबर (Your Phone No)</span>
+                                            <span class="required-star">*</span>
+                                        </label>
+                                        <div class="premium-input-box phone-box">
+                                            <div class="phone-prefix">
+                                                <span class="flag-icon">
+                                                    <svg viewBox="0 0 640 480" width="22" height="15">
+                                                        <path fill="#f93" d="M0 0h640v160H0z" />
+                                                        <path fill="#fff" d="M0 160h640v160H0z" />
+                                                        <path fill="#128807" d="M0 320h640v160H0z" />
+                                                        <circle cx="320" cy="240" r="40" fill="#008" />
+                                                    </svg>
+                                                </span>
+                                                <span class="code">+91</span>
+                                                <span class="divider"></span>
+                                            </div>
+                                            <input type="tel" name="Phone" id="phone" maxlength="10" minlength="10"
+                                                pattern="[6-9][0-9]{9}" placeholder="10 अंकों का मोबाइल नंबर"
+                                                required="" inputmode="numeric" autocomplete="tel">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field-group">
+                                        <label class="field-label" for="userAge">
+                                            <i class="fa-solid fa-cake-candles"></i>
+                                            <span>आपकी उम्र (Age)</span>
+                                            <span class="required-star">*</span>
+                                        </label>
+                                        <div class="premium-input-box">
+                                            <input type="number" id="userAge" name="Age" min="18" max="100"
+                                                placeholder="आपकी उम्र (उदा. 28 वर्ष)" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-field-group">
+                                        <label class="field-label" for="userAddress">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>अपना पूरा एड्रेस डालें (Enter Your Full Address)</span>
+                                            <span class="required-star">*</span>
+                                        </label>
+                                        <div class="premium-input-box">
+                                            <input type="text" id="userAddress" name="Address"
+                                                placeholder="मकान नं., गली/इलाका, शहर, पिन कोड..." required=""
+                                                autocomplete="street-address">
+                                        </div>
+                                    </div>
+
+                                    <!-- Hidden Fields for IP Tracking & Order Verification -->
+                                    <input type="hidden" name="User_IP" id="userIP" value="">
+                                    <input type="hidden" name="Order_Time" id="orderTime" value="">
+
+                                    <button type="submit" id="submitBtn" class="premium-submit-btn">
+                                        <span class="btn-main-text">
+                                            <i class="fa-solid fa-cart-shopping"></i>
+                                            <span>ऑर्डर करे (Order Now)</span>
+                                        </span>
+                                        <span class="btn-sub-text">⚡ कैश ऑन डिलीवरी उपलब्ध • कोई अग्रिम शुल्क
+                                            नहीं</span>
+                                    </button>
+
+                                    <div class="trust-badges-grid">
+                                        <div class="trust-badge-item">
+                                            <div class="badge-icon"><i class="fa-solid fa-box"></i></div>
+                                            <div class="badge-text">100% गोपनीय पैकिंग</div>
+                                        </div>
+                                        <div class="trust-badge-item">
+                                            <div class="badge-icon"><i class="fa-solid fa-hand-holding-dollar"></i>
+                                            </div>
+                                            <div class="badge-text">कैश ऑन डिलीवरी</div>
+                                        </div>
+                                        <div class="trust-badge-item">
+                                            <div class="badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                                            <div class="badge-text">100% सुरक्षित उत्पाद</div>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </section>
+                        </div>
+
+
+                        <!-- Modern Duplicate & IP Blocker Modal -->
+                        <div id="duplicatePopupOverlay"
+                            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.65); backdrop-filter:blur(4px); z-index:999998;"
+                            onclick="closeDuplicatePopup()"></div>
+                        <div id="duplicatePopup" style="
+        display:none;
+        position:fixed;
+        z-index:999999;
+        left:50%;
+        top:50%;
+        transform:translate(-50%,-50%);
+        width:90%;
+        max-width:440px;
+        background:#ffffff;
+        padding:28px 24px;
+        border-radius:20px;
+        box-shadow:0 20px 50px rgba(0,0,0,0.4);
+        text-align:center;
+        border:2px solid #ef4444;
+        color:#1e293b;
+     ">
+
+                            <div
+                                style="width:68px; height:68px; margin:0 auto 14px; background:#fee2e2; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#ef4444; font-size:32px;">
+                                <i class="fa-solid fa-shield-halved"></i>
+                            </div>
+
+                            <h3 id="duplicatePopupTitle"
+                                style="font-weight:800; font-size:1.35rem; color:#b91c1c; margin-bottom:10px;">
+                                Duplicate Order Found!
+                            </h3>
+
+                            <p id="duplicatePopupMsg"
+                                style="margin:0 0 20px; font-size:0.95rem; color:#475569; line-height:1.5;">
+                                इस मोबाइल नंबर या IP एड्रेस से पहले ही ऑर्डर प्राप्त हो चुका है।
+                            </p>
+
+                            <button onclick="closeDuplicatePopup()" style="
+            padding:12px 34px;
+            border:0;
+            border-radius:12px;
+            background:linear-gradient(135deg, #1e293b, #0f172a);
+            color:#fff;
+            font-weight:700;
+            font-size:1rem;
+            cursor:pointer;
+            box-shadow:0 4px 14px rgba(0,0,0,0.25);
+        ">
+                                समझ गया (OK)
+                            </button>
+
+                        </div>
+
+                        <script>
+
+                            const SCRIPT_URL =
+                                "https://script.google.com/macros/s/AKfycbzhfxvdF-i67HyNYSVpE8PPlVrjNzAkNH1V-mg0PfjwqzK-k5rZlYMGDUBvkKOJklIbxg/exec";
+
+                            const form = document.getElementById("orderForm");
+                            const submitBtn = document.getElementById("submitBtn");
+                            const phoneInput = document.getElementById("phone");
+
+                            // ========================================================
+                            // IP BLOCKER & ANTI-SPAM CONFIGURATION
+                            // ========================================================
+                            const IP_BLOCK_CONFIG = {
+                                maxOrdersPerIP: 1,      // एक IP से 24 घंटे में अधिकतम 1 ऑर्डर की अनुमति
+                                cooldownHours: 24,      // डुप्लीकेट/स्पैम कूलडाउन अवधि (घंटे)
+                                blacklistedIPs: []      // यदि किसी विशिष्ट IP को स्थायी ब्लॉक करना हो
+                            };
+
+                            let currentVisitorIP = "";
+
+                            // Background Visitor IP Detection
+                            async function initVisitorIP() {
+                                try {
+                                    const res = await fetch("https://api.ipify.org?format=json");
+                                    const data = await res.json();
+                                    if (data && data.ip) {
+                                        currentVisitorIP = data.ip;
+                                        const ipField = document.getElementById("userIP");
+                                        if (ipField) ipField.value = data.ip;
+                                    }
+                                } catch (e) {
+                                    try {
+                                        const res2 = await fetch("https://api64.ipify.org?format=json");
+                                        const data2 = await res2.json();
+                                        if (data2 && data2.ip) {
+                                            currentVisitorIP = data2.ip;
+                                            const ipField = document.getElementById("userIP");
+                                            if (ipField) ipField.value = data2.ip;
+                                        }
+                                    } catch (err) {
+                                        console.log("IP detection fallback skipped:", err);
+                                    }
+                                }
+                            }
+                            initVisitorIP();
+
+                            // Check if IP is allowed to place order
+                            function verifyIPOrderAllowed(ip) {
+                                if (!ip) return { allowed: true };
+
+                                // 1. Check blacklist
+                                if (IP_BLOCK_CONFIG.blacklistedIPs.includes(ip)) {
+                                    return {
+                                        allowed: false,
+                                        title: "Access Restricted",
+                                        msg: "सुरक्षा कारणों से आपके IP एड्रेस से ऑर्डर स्वीकार नहीं किए जा रहे हैं।"
+                                    };
+                                }
+
+                                // 2. Check duplicate / rate limit
+                                const key = "ip_orders_" + ip;
+                                const history = JSON.parse(localStorage.getItem(key) || "[]");
+                                const now = Date.now();
+                                const cooldownMs = IP_BLOCK_CONFIG.cooldownHours * 60 * 60 * 1000;
+                                const recentOrders = history.filter(time => (now - time) < cooldownMs);
+
+                                if (recentOrders.length >= IP_BLOCK_CONFIG.maxOrdersPerIP) {
+                                    return {
+                                        allowed: false,
+                                        title: "Duplicate / Spam Order Blocked!",
+                                        msg: "इस IP एड्रेस (" + ip + ") से पिछले " + IP_BLOCK_CONFIG.cooldownHours + " घंटे में पहले ही ऑर्डर प्राप्त हो चुका है। डुप्लीकेट और स्पैम रोकने के लिए दोबारा ऑर्डर करने से पहले कृपया प्रतीक्षा करें।"
+                                    };
+                                }
+
+                                return { allowed: true };
+                            }
+
+                            // Record order timestamp for this IP
+                            function saveIPOrderTimestamp(ip) {
+                                if (!ip) return;
+                                const key = "ip_orders_" + ip;
+                                const history = JSON.parse(localStorage.getItem(key) || "[]");
+                                history.push(Date.now());
+                                localStorage.setItem(key, JSON.stringify(history));
+                            }
+
+                            // Allow only numbers in phone
+                            phoneInput.addEventListener("input", function () {
+                                this.value = this.value.replace(/\D/g, "");
+                            });
+
+                            // Show / Close Custom Popup
+                            function showDuplicatePopup(title, message) {
+                                const titleEl = document.getElementById("duplicatePopupTitle");
+                                const msgEl = document.getElementById("duplicatePopupMsg");
+                                if (title && titleEl) titleEl.innerText = title;
+                                if (message && msgEl) msgEl.innerText = message;
+
+                                document.getElementById("duplicatePopupOverlay").style.display = "block";
+                                document.getElementById("duplicatePopup").style.display = "block";
+                            }
+
+                            function closeDuplicatePopup() {
+                                document.getElementById("duplicatePopupOverlay").style.display = "none";
+                                document.getElementById("duplicatePopup").style.display = "none";
+                            }
+
+                            // Form Submit
+                            form.addEventListener("submit", function (e) {
+
+                                e.preventDefault();
+
+                                const phone = phoneInput.value.trim();
+
+                                // 1. Phone validation
+                                if (!/^[6-9][0-9]{9}$/.test(phone)) {
+                                    alert("कृपया सही 10 अंकों का मोबाइल नंबर दर्ज करें।");
+                                    phoneInput.focus();
+                                    return;
+                                }
+
+                                // 2. IP Blocker & Anti-Spam Check
+                                const ipCheck = verifyIPOrderAllowed(currentVisitorIP);
+                                if (!ipCheck.allowed) {
+                                    showDuplicatePopup(ipCheck.title, ipCheck.msg);
+                                    return;
+                                }
+
+                                // 3. Browser duplicate phone check
+                                const alreadySubmitted = localStorage.getItem("order_submitted_" + phone);
+                                if (alreadySubmitted) {
+                                    showDuplicatePopup(
+                                        "Duplicate Order Found!",
+                                        "इस मोबाइल नंबर (" + phone + ") से पहले ही ऑर्डर प्राप्त हो चुका है। हमारे स्वास्थ्य विशेषज्ञ जल्द ही आपसे संपर्क करेंगे।"
+                                    );
+                                    return;
+                                }
+
+                                // Disable button & show waiting state
+                                submitBtn.disabled = true;
+                                submitBtn.innerHTML = "कृपया प्रतीक्षा करें...";
+
+                                // Record submission time
+                                const timeField = document.getElementById("orderTime");
+                                if (timeField) {
+                                    timeField.value = new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" });
+                                }
+
+                                const formData = new FormData(form);
+
+                                fetch(SCRIPT_URL, {
+                                    method: "POST",
+                                    mode: "no-cors",
+                                    body: formData
+                                })
+                                    .then(function () {
+                                        // Save Phone & IP in local order history
+                                        localStorage.setItem("order_submitted_" + phone, "1");
+                                        saveIPOrderTimestamp(currentVisitorIP);
+
+                                        // Redirect
+                                        setTimeout(function () {
+                                            window.location.replace("thankyou.html");
+                                        }, 300);
+                                    })
+                                    .catch(function (error) {
+                                        console.log("Request:", error);
+
+                                        localStorage.setItem("order_submitted_" + phone, "1");
+                                        saveIPOrderTimestamp(currentVisitorIP);
+
+                                        setTimeout(function () {
+                                            window.location.replace("thankyou.html");
+                                        }, 1000);
+                                    });
+
+                            });
+
+                            // Auto-hide sticky bottom CTA when the main order form is on screen
+                            (function () {
+                                const stickyBtn = document.getElementById("stickyOrderBar");
+                                const orderFormSection = document.getElementById("orderForm");
+                                if (stickyBtn && orderFormSection && 'IntersectionObserver' in window) {
+                                    const observer = new IntersectionObserver(function (entries) {
+                                        entries.forEach(function (entry) {
+                                            if (entry.isIntersecting) {
+                                                stickyBtn.style.opacity = "0";
+                                                stickyBtn.style.pointerEvents = "none";
+                                                stickyBtn.style.transform = "translateX(-50%) translateY(30px)";
+                                            } else {
+                                                stickyBtn.style.opacity = "1";
+                                                stickyBtn.style.pointerEvents = "auto";
+                                                stickyBtn.style.transform = "translateX(-50%) translateY(0)";
+                                            }
+                                        });
+                                    }, { threshold: 0.15 });
+                                    observer.observe(orderFormSection);
+                                }
+                            })();
+
+                        </script>
+
+                        <div class="text-center bg-light">
+                            <br>
+                            <div class="w-100"><img src="assets/images/kdeli.png" alt="no" class="w-100"></div>
+                            <br>
+                            <div class="cur_rev">Customer Reviews</div>
+                            <div class="subHomeL2 bg-light" style="width: 100%;">
+                                <div class="allReview px-3 py-2 m-2"
+                                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 7px;">
+                                    <div class="d-flex gap-2 justify-content-start align-items-center mb-2 mt-4"><img
+                                            src="assets/review/1.png" alt="pic"
+                                            style="width: 77px; height: 77px; border-radius: 50%;">
+                                        <div>
+                                            <h4 class="mb-0  text-center align-items-center">Ashok Mochi&nbsp;<img
+                                                    src="assets/images/verify.svg" alt="pic"
+                                                    style="width: 23px; height: 22px;"></h4>
+                                            <p class="m-0 text-start"><span class="ms-1"
+                                                    style="color: red; font-size: 0.9rem;"> 5 jULY 2025</span></p>
+                                        </div>
+                                    </div>
+                                    <p class="text-start mt-0 " style="font-size: 1.1rem;">यह मुझे सेक्स के दौरान अधिक
+                                        ऊर्जा देने में मदद करता है, मेरी हिसाब
+                                        से यह दूसरे उत्पाद की तुलना में अधिक असरदार है और मुझे लगता है की इस उत्पाद की
+                                        वजह से मेरी बहुत सारी यौन समस्याओं का
+                                        समाधान हुआ है, अवश्य आजमाए!</p>
+                                </div>
+                                <div class="allReview px-3 py-2 m-2"
+                                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 7px;">
+                                    <div class="d-flex gap-2 justify-content-start align-items-center mb-2 mt-4"><img
+                                            src="assets/review/7.png" alt="pic"
+                                            style="width: 77px; height: 77px; border-radius: 50%;">
+                                        <div>
+                                            <h4 class="mb-0  text-center align-items-center">Sunil Ohja&nbsp;<img
+                                                    src="assets/images/verify.svg" alt="pic"
+                                                    style="width: 23px; height: 22px;"></h4>
+                                            <p class="m-0 text-start"><span class="ms-1"
+                                                    style="color: red; font-size: 0.9rem;"> 1 jULY 2025</span></p>
+                                        </div>
+                                    </div>
+                                    <p class="text-start mt-0 " style="font-size: 1.1rem;">Sexual stamina bdhane k liye
+                                        sbse achi product hai, achi packeging
+                                        or deliver bhi time pe ho jati hai, Koi side effect nhi hai agar apko bhi hai
+                                        purush kamjori to ap Aarogya Champ
+                                        ko jroor use kre !!</p>
+                                </div>
+                                <div class="allReview px-3 py-2 m-2"
+                                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 7px;">
+                                    <div class="d-flex gap-2 justify-content-start align-items-center mb-2 mt-4"><img
+                                            src="assets/review/2.png" alt="pic"
+                                            style="width: 77px; height: 77px; border-radius: 50%;">
+                                        <div>
+                                            <h4 class="mb-0  text-center align-items-center">Vinit Chouhan&nbsp;<img
+                                                    src="assets/images/verify.svg" alt="pic"
+                                                    style="width: 23px; height: 22px;"></h4>
+                                            <p class="m-0 text-start"><span class="ms-1"
+                                                    style="color: red; font-size: 0.9rem;"> 13 jULY 2025</span></p>
+                                        </div>
+                                    </div>
+                                    <p class="text-start mt-0 " style="font-size: 1.1rem;">Awesome for ur sex life, its
+                                        not just for sex, also helps in boost
+                                        stamina and power strength ✨</p>
+                                </div>
+                                <div class="allReview px-3 py-2 m-2"
+                                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 7px;">
+                                    <div class="d-flex gap-2 justify-content-start align-items-center mb-2 mt-4"><img
+                                            src="assets/review/3.png" alt="pic"
+                                            style="width: 77px; height: 77px; border-radius: 50%;">
+                                        <div>
+                                            <h4 class="mb-0  text-center align-items-center">Manohar Mishra&nbsp;<img
+                                                    src="assets/images/verify.svg" alt="pic"
+                                                    style="width: 23px; height: 22px;">
+                                            </h4>
+                                            <p class="m-0 text-start"><span class="ms-1"
+                                                    style="color: red; font-size: 0.9rem;"> 15 jULY 2025</span></p>
+                                        </div>
+                                    </div>
+                                    <p class="text-start mt-0 " style="font-size: 1.1rem;">Great Product... I've taken
+                                        these Aarogya Champ endurance
+                                        pills to make sure my physical performance is up to the mark during intense
+                                        workout sessions and really it is up to
+                                        the mark.</p>
+                                </div>
+                                <div class="allReview px-3 py-2 m-2"
+                                    style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; border-radius: 7px;">
+                                    <div class="d-flex gap-2 justify-content-start align-items-center mb-2 mt-4"><img
+                                            src="assets/review/4.png" alt="pic"
+                                            style="width: 77px; height: 77px; border-radius: 50%;">
+                                        <div>
+                                            <h4 class="mb-0  text-center align-items-center">Tushar Shah&nbsp;<img
+                                                    src="assets/images/verify.svg" alt="pic"
+                                                    style="width: 23px; height: 22px;"></h4>
+                                            <p class="m-0 text-start"><span class="ms-1"
+                                                    style="color: red; font-size: 0.9rem;"> 15 jULY 2025</span></p>
+                                        </div>
+                                    </div>
+                                    <p class="text-start mt-0 " style="font-size: 1.1rem;">मैं इसे एक हफ्ते से इस्तेमाल
+                                        कर रहा हूं और मैं फर्क महसूस कर सकता
+                                        हूं। यह सबसे अच्छा उत्पाद है जो मेरी इम्युनिटी, स्टैमिना जोश और यौन क्षमता बढाने
+                                        में मदद करता है।</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="w-100 py-4" style="background: rgb(230, 230, 230);">
+                            <p class="text-center  m-0 fs-6" style="color: black;">© 2022
+                                COPYRIGHT. ALL RIGHTS RESERVED.</p>
+                            <p class="text-center  m-0 fs-6" style="color: rgb(147, 0, 0);">PRIVACY POLICY | TERMS &amp;
+                                CONDITION</p>
+                        </div>
+                    </div>
+                    <div class="text-light w-100 m-auto xx"
+                        style="background: rgb(38, 37, 37); position: fixed; opacity: 0.9; z-index: 10000;">
+                        <div class="d-flex justify-content-around align-items-center text-center fs-6 ">
+                            <div class="py-2">
+                                <p class="text-center fs-4 m-0">डिस्काउंट का अंत: <span class=""
+                                        style="color: rgb(225, 194, 49);">00:59:44</span></p>
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                    class="arrow-3" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z">
+                                    </path>
+                                </svg>
+                                <a href="#orderForm"
+                                    class="text-center text-decoration-none border-0 rounded-3 pt-1  px-3 fw-bold text-light"
+                                    style="background: red;">पैक 50% छूट के साथ </a>
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                    class="arrow-4" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div id="phone-link" class="d-lg-none">
+        <div class="d-flex justify-content-around align-items-center text-center fs-6 ">
+            <div class="">
+                <a href="tel:+91 9999999999">
+                    <img src="assets/images/call-gif.gif" alt="" style="width: 100%;">
+                    <div class="setCallNumber">9999999999</div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+            <a href="#orderForm"
+                style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); text-align: center; width: 100%; max-width: 540px; background: linear-gradient(135deg, #7c3aed, #5C0406); height: 52px; line-height: 52px; color: white; text-decoration: none; font-size: 24px; font-weight: 800; border-radius: 12px 12px 0 0; box-shadow: 0 -4px 20px rgba(0,0,0,0.4); z-index: 9999; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                <i class="fa-solid fa-cart-shopping" style="font-size: 20px;"></i> Order Now (अभी ऑर्डर करें)
+            </a>
+        </div>
+
+        <!--<div class="discount-count-down">
+    <div class="d-inline-block text-light py-2 px-4 rounded-3 fs-5" style="background-color: rgba(17, 17, 17, 0.9);">
+        <a href="#orderForm" class="text-decoration-none text-light fw-bold fs-3 ">
+            <div class="align-items-center text-center  fs-2">
+                <div class="d-flex justify-content-between align-items-center"><p class="text-center my-1 fs-4">डिस्काउंट का अंत
+                    &nbsp; </p>
+                    <div class="fs-3" style="color: rgb(225, 194, 49);" id="demo"></div>
+                </div>
+                <span class="text-center text-decoration-none border-0 rounded-3 fs-6 px-3  py-2 fw-bold text-light" style="background: red;">पैक 50% छूट के साथ </span>
+            </div>
+        </a>
+    </div> -->
+    </div>
+    <!--<div class="whatsapp-sticky">
+        <a href="#" target="_blank">
+    <img src="assets/what.webp" alt="WhatsApp Icon" width="80" height="80">
+</a>
+    </div> -->
+    <!-- <div class="phone">
+        <a href="tel:8588065076"><img src="assets/call.webp" alt="Call Now" title="Call Now" style="width: 100%;"></a>
+         </div>-->
+    <script>
+        function startCountdown(durationInSeconds) {
+            let endTime = Date.now() + durationInSeconds * 1000;
+
+            function updateClock() {
+                let remainingTime = endTime - Date.now();
+                if (remainingTime <= 0) {
+                    document.getElementById("clockdiv-1").innerHTML = "Time's Up!";
+                    return;
+                }
+                let seconds = Math.floor((remainingTime / 1000) % 60);
+                let minutes = Math.floor((remainingTime / 1000 / 60) % 60);
+                let hours = Math.floor((remainingTime / 1000 / 60 / 60) % 24);
+                let days = Math.floor(remainingTime / 1000 / 60 / 60 / 24);
+
+                document.querySelector(".days").textContent = days;
+                document.querySelector(".hours").textContent = hours;
+                document.querySelector(".minutes").textContent = minutes;
+                document.querySelector(".seconds").textContent = seconds;
+            }
+
+            updateClock();
+            setInterval(updateClock, 1000);
+        }
+
+        startCountdown(05 * 60 * 60 + 00 * 60 + 00); // Example countdown time
+    </script>
+
+
+</body>
+
+</html>
