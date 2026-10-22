@@ -9,7 +9,7 @@ services:
     # host, so TLS is issued by the shared "letsencrypt" resolver.
     labels:
       - traefik.enable=true
-      - traefik.http.routers.wellness1.entrypoints=websecure
-      - traefik.http.routers.wellness1.rule=Host(`wellness.aarogya.cloud`)
-      - traefik.http.routers.wellness1.tls.certresolver=letsencrypt
+      - traefik.http.routers.wellness-site.entrypoints=websecure
+      - traefik.http.routers.wellness-site.rule=Host(`wellness.aarogya.cloud`)
+      - traefik.http.routers.wellness-site.tls.certresolver=letsencrypt
       - traefik.http.services.wellness1.loadbalancer.server.port=80
