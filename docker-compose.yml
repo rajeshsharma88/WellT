@@ -1,0 +1,10 @@
+services:
+  wellness1:
+    build: .
+    image: wellness1:latest
+    container_name: wellness1
+    restart: unless-stopped
+    # Bound to localhost so a reverse proxy on the host terminates TLS.
+    # Change to "80:80" only if this container faces the internet directly.
+    ports:
+      - "127.0.0.1:8080:80"

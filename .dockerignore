@@ -1,0 +1,9 @@
+.git
+.gitignore
+.DS_Store
+__MACOSX/
+Dockerfile
+.dockerignore
+docker-compose.yml
+DEPLOY.md
+*.zip
