@@ -1,0 +1,1071 @@
+<!DOCTYPE html>
+<html lang="hi">
+
+<head>
+  <meta charset="utf-8">
+
+  <link rel="icon" href="favicon.ico">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>अपना समाधान जानें</title>
+
+  <meta name="description" content="अपनी उम्र चुनें और अपने लिए उपलब्ध जानकारी जानें।">
+
+  <meta name="theme-color" content="#0d684c">
+
+  <style>
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f3f7f4;
+      color: #17211d;
+      font-family: Arial, "Noto Sans Devanagari", sans-serif;
+      line-height: 1.5;
+    }
+
+    /* =========================================
+       PAGE
+    ========================================= */
+
+    .page {
+      width: 100%;
+      max-width: 620px;
+      margin: auto;
+      background: #ffffff;
+      min-height: 100vh;
+      overflow: hidden;
+    }
+
+    /* =========================================
+       TOP BAR
+    ========================================= */
+
+    .top {
+      background: #0d684c;
+      color: #ffffff;
+      text-align: center;
+      padding: 9px 12px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    /* =========================================
+       HERO
+    ========================================= */
+
+    .hero {
+      padding: 22px 16px 40px;
+      text-align: center;
+
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(193, 148, 51, .10),
+          transparent 35%
+        ),
+        linear-gradient(
+          180deg,
+          #f5fff9 0%,
+          #ffffff 80%
+        );
+    }
+
+    h1 {
+      margin: 0 auto 8px;
+
+      max-width: 570px;
+
+      font-size: 29px;
+      line-height: 1.25;
+
+      color: #075239;
+
+      font-weight: 800;
+      letter-spacing: -.3px;
+    }
+
+    .highlight {
+      color: #b57916;
+    }
+
+    .sub {
+      margin: 0 auto 18px;
+
+      font-size: 15px;
+      line-height: 1.5;
+
+      color: #69766f;
+    }
+
+    /* =========================================
+       IMAGE
+    ========================================= */
+
+    .image-box {
+      position: relative;
+
+      width: 100%;
+      max-width: 430px;
+
+      margin: 0 auto 22px;
+    }
+
+    .image-box img {
+      width: 100%;
+
+      display: block;
+
+      aspect-ratio: 1 / .78;
+
+      object-fit: cover;
+
+      border-radius: 20px;
+
+      box-shadow:
+        0 12px 30px rgba(0, 70, 45, .15);
+    }
+
+    /* =========================================
+       FORM CARD
+    ========================================= */
+
+    .form-box {
+      background: #ffffff;
+
+      border: 1px solid #dce8e1;
+
+      border-radius: 20px;
+
+      padding: 19px 14px 17px;
+
+      box-shadow:
+        0 8px 25px rgba(0, 60, 40, .08);
+
+      text-align: left;
+    }
+
+    /* =========================================
+       QUESTION
+    ========================================= */
+
+    .question {
+      text-align: center;
+
+      margin-bottom: 14px;
+    }
+
+    .question small {
+      display: block;
+
+      color: #0d684c;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      letter-spacing: .6px;
+
+      margin-bottom: 3px;
+    }
+
+    .question strong {
+      display: block;
+
+      font-size: 20px;
+
+      line-height: 1.3;
+
+      color: #173c2e;
+    }
+
+    /* =========================================
+       AGE OPTIONS
+    ========================================= */
+
+    .ages {
+      display: grid;
+
+      grid-template-columns: 1fr;
+
+      gap: 9px;
+    }
+
+    .age {
+      position: relative;
+    }
+
+    .age input {
+      position: absolute;
+
+      opacity: 0;
+
+      pointer-events: none;
+    }
+
+    .age label {
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      width: 100%;
+
+      min-height: 55px;
+
+      padding: 0 15px;
+
+      border: 2px solid #e0e9e4;
+
+      border-radius: 13px;
+
+      background: #ffffff;
+
+      color: #26332e;
+
+      font-size: 15px;
+
+      font-weight: 700;
+
+      cursor: pointer;
+
+      transition:
+        border-color .2s ease,
+        background .2s ease,
+        transform .15s ease,
+        box-shadow .2s ease;
+    }
+
+    .age label:active {
+      transform: scale(.98);
+    }
+
+    .age-left {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+    }
+
+    /* Radio circle */
+
+    .circle {
+      width: 21px;
+      height: 21px;
+
+      flex-shrink: 0;
+
+      border: 2px solid #b8c8c0;
+
+      border-radius: 50%;
+
+      position: relative;
+    }
+
+    /* Selected */
+
+    .age input:checked + label {
+      border-color: #0d684c;
+
+      background: #effaf5;
+
+      color: #075239;
+
+      box-shadow:
+        0 5px 18px rgba(15, 107, 79, .12);
+    }
+
+    .age input:checked + label .circle {
+      background: #0d684c;
+
+      border-color: #0d684c;
+    }
+
+    .age input:checked + label .circle::after {
+      content: "";
+
+      width: 7px;
+      height: 7px;
+
+      background: #ffffff;
+
+      border-radius: 50%;
+
+      position: absolute;
+
+      left: 5px;
+      top: 5px;
+    }
+
+    .arrow {
+      font-size: 22px;
+
+      line-height: 1;
+
+      color: #9ba9a2;
+
+      transition: transform .2s ease;
+    }
+
+    .age input:checked + label .arrow {
+      color: #0d684c;
+
+      transform: translateX(3px);
+    }
+
+    /* =========================================
+       CTA
+    ========================================= */
+
+    .cta {
+      position: relative;
+
+      overflow: hidden;
+
+      width: 100%;
+
+      height: 58px;
+
+      margin-top: 14px;
+
+      border: 0;
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #0b684b,
+          #119267
+        );
+
+      color: #ffffff;
+
+      font-size: 18px;
+
+      font-weight: 800;
+
+      cursor: pointer;
+
+      box-shadow:
+        0 8px 22px rgba(11, 104, 75, .30);
+
+      animation:
+        ctaPulse 2.2s ease-in-out infinite;
+
+      transition:
+        background .2s ease,
+        box-shadow .2s ease;
+    }
+
+    /* =========================================
+       CTA TEXT
+    ========================================= */
+
+    .cta-text {
+      position: relative;
+
+      z-index: 3;
+
+      display: inline-block;
+    }
+
+    /* =========================================
+       NORMAL SHINE
+    ========================================= */
+
+    .cta::after {
+      content: "";
+
+      position: absolute;
+
+      top: 0;
+
+      left: -100%;
+
+      width: 45%;
+
+      height: 100%;
+
+      background:
+        linear-gradient(
+          100deg,
+          transparent,
+          rgba(255,255,255,.45),
+          transparent
+        );
+
+      transform: skewX(-20deg);
+
+      animation:
+        ctaShine 3s infinite;
+    }
+
+    /* =========================================
+       NORMAL PULSE
+    ========================================= */
+
+    @keyframes ctaPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.015);
+      }
+
+    }
+
+    /* =========================================
+       NORMAL SHINE
+    ========================================= */
+
+    @keyframes ctaShine {
+
+      0% {
+        left: -100%;
+      }
+
+      45%,
+      100% {
+        left: 130%;
+      }
+
+    }
+
+    /* =========================================
+       SELECTED / READY STATE
+    ========================================= */
+
+    .cta.ready {
+
+      animation:
+        ctaPulseFast .72s ease-in-out infinite,
+        ctaGlow .72s ease-in-out infinite;
+
+    }
+
+    /* Faster shine */
+
+    .cta.ready::after {
+
+      animation:
+        ctaShineFast 1.05s infinite;
+
+    }
+
+    /* =========================================
+       FAST PULSE
+    ========================================= */
+
+    @keyframes ctaPulseFast {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.055);
+      }
+
+    }
+
+    /* =========================================
+       FAST GLOW
+    ========================================= */
+
+    @keyframes ctaGlow {
+
+      0%,
+      100% {
+        box-shadow:
+          0 8px 22px rgba(11, 104, 75, .30);
+      }
+
+      50% {
+        box-shadow:
+          0 10px 35px rgba(11, 104, 75, .60);
+      }
+
+    }
+
+    /* =========================================
+       FAST SHINE
+    ========================================= */
+
+    @keyframes ctaShineFast {
+
+      0% {
+        left: -100%;
+      }
+
+      45%,
+      100% {
+        left: 130%;
+      }
+
+    }
+
+    /* =========================================
+       SECURE TEXT
+    ========================================= */
+
+    .secure {
+      text-align: center;
+
+      margin-top: 8px;
+
+      font-size: 11px;
+
+      color: #7d8983;
+    }
+
+    /* =========================================
+       STICKY MOBILE CTA
+    ========================================= */
+
+    .sticky {
+
+      position: fixed;
+
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      z-index: 100;
+
+      padding: 8px 10px;
+
+      background:
+        rgba(255, 255, 255, .96);
+
+      backdrop-filter: blur(10px);
+
+      border-top:
+        1px solid #dce7e1;
+
+    }
+
+    .sticky button {
+
+      display: block;
+
+      width: 100%;
+
+      max-width: 620px;
+
+      margin: auto;
+
+      height: 50px;
+
+      border: 0;
+
+      border-radius: 12px;
+
+      background: #0d684c;
+
+      color: #ffffff;
+
+      font-size: 16px;
+
+      font-weight: 800;
+
+      box-shadow:
+        0 5px 18px rgba(11, 104, 75, .25);
+
+    }
+
+    .sticky.ready button {
+
+      animation:
+        stickyPulse .7s ease-in-out infinite;
+
+    }
+
+    @keyframes stickyPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.025);
+      }
+
+    }
+
+    /* =========================================
+       FOOTER
+    ========================================= */
+
+    .footer {
+
+      padding:
+        22px 16px 80px;
+
+      text-align: center;
+
+      color: #8a938e;
+
+      font-size: 10px;
+
+      line-height: 1.5;
+    }
+
+    /* =========================================
+       DESKTOP
+    ========================================= */
+
+    @media (min-width: 650px) {
+
+      body {
+        padding: 25px 0;
+      }
+
+      .page {
+
+        border-radius: 24px;
+
+        box-shadow:
+          0 15px 60px rgba(0,0,0,.10);
+
+      }
+
+      .hero {
+
+        padding:
+          35px 40px 45px;
+
+      }
+
+      .ages {
+
+        grid-template-columns:
+          repeat(3, 1fr);
+
+      }
+
+      .sticky {
+
+        display: none;
+
+      }
+
+      .footer {
+
+        padding-bottom: 30px;
+
+      }
+
+    }
+
+    /* =========================================
+       SMALL PHONES
+    ========================================= */
+
+    @media (max-width: 380px) {
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .sub {
+        font-size: 14px;
+      }
+
+      .question strong {
+        font-size: 18px;
+      }
+
+      .form-box {
+        padding:
+          17px 12px;
+      }
+
+      .age label {
+        min-height: 53px;
+
+        font-size: 14px;
+      }
+
+      .cta {
+        height: 56px;
+
+        font-size: 17px;
+      }
+
+    }
+
+    /* =========================================
+       REDUCED MOTION
+    ========================================= */
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .cta,
+      .cta::after,
+      .sticky.ready button {
+
+        animation: none !important;
+
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <div class="page">
+
+    <!-- TOP BAR -->
+
+    <div class="top">
+      🌿 प्राकृतिक एवं आयुर्वेदिक जानकारी
+    </div>
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <h1>
+        क्या आप कमजोरी और
+        <span class="highlight">थकावट</span>
+        से परेशान हैं?
+      </h1>
+
+      <p class="sub">
+        अपनी उम्र चुनें और समाधान जानें
+      </p>
+
+
+      <!-- IMAGE -->
+
+      <div class="image-box">
+
+        <img src="assets/images/age-hero.jpg" alt="खुशहाल दंपति" loading="eager">
+
+      </div>
+
+
+      <!-- FORM -->
+
+      <div class="form-box">
+
+        <div class="question">
+
+          <small>STEP 1</small>
+
+          <strong>
+            आपकी उम्र क्या है?
+          </strong>
+
+        </div>
+
+
+        <form id="ageForm">
+
+          <!-- AGE 1 -->
+
+          <div class="ages">
+
+            <div class="age">
+
+              <input type="radio" name="age" id="age1" value="25-35" required="">
+
+              <label for="age1">
+
+                <span class="age-left">
+
+                  <span class="circle"></span>
+
+                  25 से 35 वर्ष
+
+                </span>
+
+                <span class="arrow">
+                  ›
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <!-- AGE 2 -->
+
+            <div class="age">
+
+              <input type="radio" name="age" id="age2" value="35-50">
+
+              <label for="age2">
+
+                <span class="age-left">
+
+                  <span class="circle"></span>
+
+                  35 से 50 वर्ष
+
+                </span>
+
+                <span class="arrow">
+                  ›
+                </span>
+
+              </label>
+
+            </div>
+
+
+            <!-- AGE 3 -->
+
+            <div class="age">
+
+              <input type="radio" name="age" id="age3" value="50-60">
+
+              <label for="age3">
+
+                <span class="age-left">
+
+                  <span class="circle"></span>
+
+                  50 से 60+ वर्ष
+
+                </span>
+
+                <span class="arrow">
+                  ›
+                </span>
+
+              </label>
+
+            </div>
+
+          </div>
+
+
+          <!-- CTA -->
+
+          <button type="submit" class="cta" id="ctaButton">
+
+            <span class="cta-text" id="ctaText">
+
+              👉 समाधान जानें
+
+            </span>
+
+          </button>
+
+
+          <div class="secure">
+
+            🔒 आपकी जानकारी निजी रखी जाएगी
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+      © 2026 Ayurvedic Health
+
+      <br>
+
+      केवल सामान्य जानकारी हेतु।
+
+    </div>
+
+  </div>
+
+
+  <!-- MOBILE STICKY BUTTON -->
+
+  <div class="sticky" id="stickyCTA">
+
+    <button type="button" id="stickyButton">
+
+      👉 समाधान जानें
+
+    </button>
+
+  </div>
+
+
+  <script>
+
+    /* =========================================
+       ELEMENTS
+    ========================================= */
+
+    const form =
+      document.getElementById("ageForm");
+
+    const ageInputs =
+      document.querySelectorAll(
+        'input[name="age"]'
+      );
+
+    const ctaButton =
+      document.getElementById("ctaButton");
+
+    const ctaText =
+      document.getElementById("ctaText");
+
+    const stickyCTA =
+      document.getElementById("stickyCTA");
+
+    const stickyButton =
+      document.getElementById("stickyButton");
+
+    /*
+     * Where the visitor goes once an age
+     * is chosen: the main offer (LP) page.
+     * Set your LP domain URL below (e.g. "https://your-lp-domain.com").
+     */
+    const LP_URL = "https://aarogyaindia.net/wella/";
+
+    function goToOffer(age) {
+      // Preserve any existing UTM / fbclid tracking parameters from current URL:
+      const params = new URLSearchParams(window.location.search);
+      params.set("age", age);
+
+      const separator = LP_URL.includes("?") ? "&" : "?";
+      window.location.href = LP_URL + separator + params.toString();
+    }
+
+
+    /* =========================================
+       AGE SELECTION
+    ========================================= */
+
+    ageInputs.forEach(function(input) {
+
+      input.addEventListener(
+        "change",
+        function() {
+
+          /*
+           * User selected an age.
+           * Make CTA animation much faster.
+           */
+
+          ctaButton.classList.add("ready");
+
+          stickyCTA.classList.add("ready");
+
+          /*
+           * Change CTA text so the next
+           * action is obvious.
+           */
+
+          ctaText.textContent =
+            "👉 अब समाधान देखें";
+
+          stickyButton.textContent =
+            "👉 अब समाधान देखें";
+
+        }
+      );
+
+    });
+
+
+    /* =========================================
+       FORM SUBMIT
+    ========================================= */
+
+    form.addEventListener(
+      "submit",
+      function(e) {
+
+        e.preventDefault();
+
+        const selectedAge =
+          document.querySelector(
+            'input[name="age"]:checked'
+          );
+
+        if (!selectedAge) {
+
+          return;
+
+        }
+
+        goToOffer(selectedAge.value);
+
+      }
+    );
+
+
+    /* =========================================
+       STICKY BUTTON
+    ========================================= */
+
+    stickyButton.addEventListener(
+      "click",
+      function() {
+
+        const selectedAge =
+          document.querySelector(
+            'input[name="age"]:checked'
+          );
+
+        /*
+         * If age isn't selected,
+         * scroll user to age selection.
+         */
+
+        if (!selectedAge) {
+
+          document
+            .querySelector(".form-box")
+            .scrollIntoView({
+              behavior: "smooth",
+              block: "center"
+            });
+
+          return;
+
+        }
+
+        /*
+         * Age already selected,
+         * continue to offer.
+         */
+
+        goToOffer(selectedAge.value);
+
+      }
+    );
+
+  </script>
+
+
+</body>
+
+</html>
