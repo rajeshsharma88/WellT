@@ -7,4 +7,6 @@ Dockerfile
 docker-compose.yml
 DEPLOY.md
 google-apps-script/
+LP/
+final-pere-lander/
 *.zip
